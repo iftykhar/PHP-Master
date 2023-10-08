@@ -3,6 +3,9 @@
 
 class Book{
 
+
+    protected $page_numbers;
+
     public function purchase(){
 
     }
@@ -14,18 +17,24 @@ class Book{
 
 }
 
-class AudioBook extends Book{
+class AudioBook {
 
+    public Book $book;
 
     public function listen(){
 
     }
 
-    public function lend(){
-        return null;
-    }
+    // not good practice at all 
+    // public function lend(){
+    //     return null;
+    // }
 }
 
 class Ebook extends Book{
 
+
+    public function read(){
+
+    }
 }
